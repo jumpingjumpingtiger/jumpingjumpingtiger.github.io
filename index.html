@@ -3,26 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apps and open source projects by Jumping Tiger Studio.">
     <title>Jumping Tiger Studio - Developer Site</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; padding: 40px; max-width: 800px; margin: 0 auto; color: #333; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; padding: 32px 20px; max-width: 800px; margin: 0 auto; color: #333; }
         h1 { color: #111; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .app-card { background: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 20px; border: 1px solid #eee; }
-        a { color: #0066cc; text-decoration: none; }
+        h2 { margin-top: 36px; }
+        .app-card, .project-card { background: #f9f9f9; padding: 18px; border-radius: 8px; margin-top: 16px; border: 1px solid #eee; }
+        .app-card { display: flex; align-items: flex-start; gap: 18px; }
+        .app-icon { width: 88px; height: 88px; flex: none; border-radius: 20px; object-fit: cover; }
+        .app-card h3, .project-card h3 { margin: 0 0 6px; }
+        .app-card p, .project-card p { margin: 0 0 10px; }
+        a { color: #0066cc; }
+        a:hover { text-decoration: none; }
+        footer { margin-top: 40px; font-size: 0.9em; color: #666; }
+        @media (max-width: 480px) {
+            .app-icon { width: 64px; height: 64px; border-radius: 15px; }
+            .app-card { gap: 14px; }
+        }
     </style>
 </head>
 <body>
-    <h1>Jumping Tiger Studio</h1>
-    <p>Welcome to my official developer homepage. We design and build bilingual learning tools and functional mobile applications.</p>
-    
-    <h2>Our Apps</h2>
-    <div class="app-card">
-        <h3>Clozetest</h3>
-        <p>A fun bilingual fill-in-the-blank word puzzle game for English and Chinese language learners.</p>
-    </div>
+    <main>
+        <h1>Jumping Tiger Studio</h1>
+        <p>Welcome to my official developer homepage. I design and build bilingual learning tools, useful mobile apps, and open source projects.</p>
 
-    <div style="margin-top: 40px; font-size: 0.9em; color: #666;">
-        <p>Support / Contact: apphelp2000@outlook.com</p>
-    </div>
+        <section aria-labelledby="apps-heading">
+            <h2 id="apps-heading">My Apps</h2>
+            <article class="app-card">
+                <img class="app-icon" src="assets/clozetest-icon.webp" alt="Clozetest app icon" width="88" height="88">
+                <div>
+                    <h3>Clozetest</h3>
+                    <p>Practice Chinese and English vocabulary through bilingual fill-in-the-blank challenges.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.clozetest.app" target="_blank" rel="noopener noreferrer" aria-label="View Clozetest on Google Play">View on Google Play →</a>
+                </div>
+            </article>
+            <article class="app-card">
+                <img class="app-icon" src="assets/omnieye-icon.webp" alt="OmniEye app icon" width="88" height="88" loading="lazy">
+                <div>
+                    <h3>OmniEye</h3>
+                    <p>Inspect app permissions, storage, network traffic, and battery usage on your Android device.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.jimp.omnieye" target="_blank" rel="noopener noreferrer" aria-label="View OmniEye on Google Play">View on Google Play →</a>
+                </div>
+            </article>
+            <article class="app-card">
+                <img class="app-icon" src="assets/linespotter-icon.webp" alt="LineSpotter app icon" width="88" height="88" loading="lazy">
+                <div>
+                    <h3>LineSpotter</h3>
+                    <p>Find real English words in a fast sentence-spotting puzzle.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.jimp.linespotter" target="_blank" rel="noopener noreferrer" aria-label="View LineSpotter on Google Play">View on Google Play →</a>
+                </div>
+            </article>
+        </section>
+
+        <section aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Open Source Projects</h2>
+            <article class="project-card">
+                <h3>Novel Tomography Agent</h3>
+                <p>Explore a story's events, characters, time, and locations with an LLM-powered interactive visualization.</p>
+                <a href="https://github.com/jumpingjumpingtiger/llmtexttg" target="_blank" rel="noopener noreferrer">View llmtexttg on GitHub →</a>
+            </article>
+            <article class="project-card">
+                <h3>OminiStudio</h3>
+                <p>Create and iterate on playable web games with AI-generated code and visual assets.</p>
+                <a href="https://github.com/jumpingjumpingtiger/oministudio" target="_blank" rel="noopener noreferrer">View oministudio on GitHub →</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Support / Contact: <a href="mailto:apphelp2000@outlook.com">apphelp2000@outlook.com</a></p>
+    </footer>
 </body>
 </html>
